@@ -1,0 +1,41 @@
+-- REGISTER FILE MIPS MONO
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity BANK_REGISTER is 
+generic (p_SIZE    : integer := 32;
+			addr_SIZE : integer := 5);
+port (
+  i_CLK       : in  std_logic;
+  i_RSTn      : in  std_logic;
+  i_WR        : in  std_logic;
+  i_RD_ADDR_A : in  std_logic_vector(addr_SIZE - 1 downto 0);
+  i_RD_ADDR_B : in  std_logic_vector(addr_SIZE - 1 downto 0);
+  i_WR_ADDR   : in  std_logic_vector(addr_SIZE - 1 downto 0);
+  i_DATA      : in  std_logic_vector(p_SIZE - 1 downto 0);
+  o_RD_DATA_A : out std_logic_vector(p_SIZE - 1 downto 0);
+  o_RD_DATA_B : out std_logic_vector(p_SIZE - 1 downto 0));
+end entity;
+
+architecture arch_1 of BANK_REGISTER is
+
+type t_REG is array(p_SIZE - 1 downto 0) of std_logic_vector(p_SIZE - 1 downto 0);
+signal w_BANK_REG : t_REG := (others =>(others => '0'));
+
+begin 
+
+  u_WR:process (i_CLK, i_WR, i_RSTn)
+    begin 
+	   if(i_RSTn = '0') then 
+		  w_BANK_REG <= (others=>(others=>'0'));
+		elsif (rising_edge(i_CLK)) then 
+		  if(i_WR = '1') then 
+		    w_BANK_REG(to_integer(unsigned(i_WR_ADDR))) <= i_DATA;
+		  end if;
+		end if;
+    end process;
+
+  o_RD_DATA_A <= w_BANK_REG(to_integer(unsigned(i_RD_ADDR_A)));
+  o_RD_DATA_B <= w_BANK_REG(to_integer(unsigned(i_RD_ADDR_B)));
+end arch_1;
+	 

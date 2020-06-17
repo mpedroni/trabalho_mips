@@ -27,6 +27,6 @@ constant rom_data: ROM_type:=(
 	);
 begin 
 
-o_INSTRUCTION <= rom_data(conv_integer(i_PC(31 downto 0))); 
+o_INSTRUCTION <= rom_data(to_integer(unsigned(i_PC))/4);
 
 end arch_1;
