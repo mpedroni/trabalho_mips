@@ -3,9 +3,9 @@ use ieee.std_logic_1164.all;
 
 entity ULA_OP is 
 port (
-  i_ULA_OP : in std_logic_vector(1 downto 0);
+  i_ULA_OP   : in std_logic_vector(1 downto 0);
   i_INSTRUCT : in std_logic_vector(5 downto 0);
-  o_ULA : out std_logic_vector(2 downto 0));
+  o_ULA      : out std_logic_vector(2 downto 0));
 end entity;
 
 architecture arch_1 of ULA_OP is 

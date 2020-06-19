@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY CONC_28_32
+set_global_assignment -name TOP_LEVEL_ENTITY DATAPATH_MIPS
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:57:44  JUNE 10, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -67,6 +67,8 @@ set_global_assignment -name VHDL_FILE ADDER_32.vhd
 set_global_assignment -name VHDL_FILE SHIFT_2_32.vhd
 set_global_assignment -name VHDL_FILE SHIFT_2_26_28.vhd
 set_global_assignment -name VHDL_FILE CONC_28_32.vhd
+set_global_assignment -name VHDL_FILE DATAPATH_MIPS.vhd
+set_global_assignment -name VHDL_FILE MUX_5.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
