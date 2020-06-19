@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Jun 18 20:53:10 2020
+Analysis & Synthesis Status : Successful - Thu Jun 18 22:11:09 2020
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : MIPS
-Top-level Entity Name : EXT_32
+Top-level Entity Name : CONC_28_32
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 48
+Total pins : 92
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

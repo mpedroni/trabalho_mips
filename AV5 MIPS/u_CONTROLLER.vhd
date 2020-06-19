@@ -21,7 +21,7 @@ port(
 end u_CONTROLLER;
 
 
-architecture arch_1 of CONTROL_MIPS is
+architecture arch_1 of u_CONTROLLER is
 --signals
   signal w_R_FORMAT : std_logic;
   signal w_LW		  : std_logic;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Thu Jun 18 20:53:10 2020
+Thu Jun 18 22:11:09 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun 18 20:53:10 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 18 22:11:09 2020       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
-; Top-level Entity Name           ; EXT_32                                      ;
+; Top-level Entity Name           ; CONC_28_32                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 48                                          ;
+; Total pins                      ; 92                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; EXT_32             ; MIPS               ;
+; Top-level entity name                                                           ; CONC_28_32         ; MIPS               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -166,40 +166,40 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+---------+
-; EXT_32.vhd                       ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+---------+
+; CONC_28_32.vhd                   ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 0             ;
-;                                             ;               ;
-; Combinational ALUT usage for logic          ; 0             ;
-;     -- 7 input functions                    ; 0             ;
-;     -- 6 input functions                    ; 0             ;
-;     -- 5 input functions                    ; 0             ;
-;     -- 4 input functions                    ; 0             ;
-;     -- <=3 input functions                  ; 0             ;
-;                                             ;               ;
-; Dedicated logic registers                   ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 48            ;
-;                                             ;               ;
-; Total DSP Blocks                            ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; o_D[0]~output ;
-; Maximum fan-out                             ; 1             ;
-; Total fan-out                               ; 64            ;
-; Average fan-out                             ; 0.67          ;
-+---------------------------------------------+---------------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 0      ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 0      ;
+;     -- 7 input functions                    ; 0      ;
+;     -- 6 input functions                    ; 0      ;
+;     -- 5 input functions                    ; 0      ;
+;     -- 4 input functions                    ; 0      ;
+;     -- <=3 input functions                  ; 0      ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 92     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; i_B[0] ;
+; Maximum fan-out                             ; 1      ;
+; Total fan-out                               ; 124    ;
+; Average fan-out                             ; 0.67   ;
++---------------------------------------------+--------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -207,7 +207,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |EXT_32                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 48   ; 0            ; |EXT_32             ; EXT_32      ; work         ;
+; |CONC_28_32                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 92   ; 0            ; |CONC_28_32         ; CONC_28_32  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -229,17 +229,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 48                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 92                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -257,12 +254,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Jun 18 20:53:00 2020
+    Info: Processing started: Thu Jun 18 22:10:58 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file u_controller.vhd
-    Info (12023): Found entity 1: u_CONTROLLER File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file u_controller.vhd
+    Info (12022): Found design unit 1: u_CONTROLLER-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 24
+    Info (12023): Found entity 1: u_CONTROLLER File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file u_instruction_memory.vhd
     Info (12022): Found design unit 1: u_INSTRUCTION_MEMORY-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 14
     Info (12023): Found entity 1: u_INSTRUCTION_MEMORY File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 7
@@ -287,33 +285,57 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_32.
 Info (12021): Found 2 design units, including 1 entities, in source file ext_32.vhd
     Info (12022): Found design unit 1: EXT_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 10
     Info (12023): Found entity 1: EXT_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 4
-Info (12127): Elaborating entity "EXT_32" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_D[15]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[16]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[17]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[18]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[19]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[20]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[21]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[22]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[23]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[24]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[25]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[26]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[27]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[28]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[29]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
-    Warning (13410): Pin "o_D[30]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file adder_32.vhd
+    Info (12022): Found design unit 1: ADDER_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ADDER_32.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ADDER_32.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file shift_2_32.vhd
+    Info (12022): Found design unit 1: SHIFT_2_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd Line: 10
+    Info (12023): Found entity 1: SHIFT_2_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shift_2_26_28.vhd
+    Info (12022): Found design unit 1: SHIFT_2_26_28-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd Line: 10
+    Info (12023): Found entity 1: SHIFT_2_26_28 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conc_28_32.vhd
+    Info (12022): Found design unit 1: CONC_28_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 11
+    Info (12023): Found entity 1: CONC_28_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 4
+Info (12127): Elaborating entity "CONC_28_32" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 16 input pins
+Warning (21074): Design contains 28 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_B[0]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[1]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[2]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[3]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[4]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[5]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[6]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[7]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[8]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[9]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[10]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[11]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[12]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[13]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[14]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[15]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[16]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[17]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[18]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[19]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[20]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[21]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[22]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[23]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[24]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[25]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[26]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+    Warning (15610): No output dependent on input pin "i_B[27]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 7
+Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 60 input pins
     Info (21059): Implemented 32 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
     Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Thu Jun 18 20:53:10 2020
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Thu Jun 18 22:11:09 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:26
 
 
