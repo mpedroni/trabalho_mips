@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Fri Jun 19 03:11:46 2020
+Sat Jun 20 09:50:00 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -13,23 +13,22 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |DATAPATH_MIPS
- 12. Parameter Settings for User Entity Instance: u_PC:u_PC1
- 13. Parameter Settings for User Entity Instance: MUX_32:u_MUX_5
- 14. Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_ULA
- 15. Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_B
- 16. Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_J
- 17. Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_D
- 18. Parameter Settings for User Entity Instance: BANK_REGISTER:u_BANK_REGISTER
- 19. Parameter Settings for User Entity Instance: ULA_MIPS:u_ULA_MIPS
- 20. Parameter Settings for User Entity Instance: DATA_MEMORY:u_DATA_MEMORY
- 21. Port Connectivity Checks: "SHIFT_2_32:u_SHIFT_2_32"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |u_TOP_MIPS
+ 10. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath
+ 11. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|u_PC:u_PC1
+ 12. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_5
+ 13. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_ULA
+ 14. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_B
+ 15. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_J
+ 16. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_D
+ 17. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|BANK_REGISTER:u_BANK_REGISTER
+ 18. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|ULA_MIPS:u_ULA_MIPS
+ 19. Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|DATA_MEMORY:u_DATA_MEMORY
+ 20. Port Connectivity Checks: "DATAPATH_MIPS:u_datapath|SHIFT_2_32:u_SHIFT_2_32"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -56,14 +55,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun 19 03:11:46 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sat Jun 20 09:50:00 2020       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
-; Top-level Entity Name           ; DATAPATH_MIPS                               ;
+; Top-level Entity Name           ; u_TOP_MIPS                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 17                                          ;
+; Total pins                      ; 2                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -82,7 +81,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; DATAPATH_MIPS      ; MIPS               ;
+; Top-level entity name                                                           ; u_TOP_MIPS         ; MIPS               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -169,7 +168,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -179,369 +178,63 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                          ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
-; u_INSTRUCTION_MEMORY.vhd         ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd ;         ;
-; u_PC.vhd                         ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_PC.vhd                 ;         ;
-; BANK_REGISTER.vhd                ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/BANK_REGISTER.vhd        ;         ;
-; ULA_MIPS.vhd                     ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ULA_MIPS.vhd             ;         ;
-; ULA_OP.vhd                       ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ULA_OP.vhd               ;         ;
-; DATA_MEMORY.vhd                  ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATA_MEMORY.vhd          ;         ;
-; MUX_32.vhd                       ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/MUX_32.vhd               ;         ;
-; EXT_32.vhd                       ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd               ;         ;
-; SHIFT_2_32.vhd                   ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd           ;         ;
-; SHIFT_2_26_28.vhd                ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd        ;         ;
-; CONC_28_32.vhd                   ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd           ;         ;
-; DATAPATH_MIPS.vhd                ; yes             ; User VHDL File  ; C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; u_CONTROLLER.vhd                 ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd         ;         ;
+; u_INSTRUCTION_MEMORY.vhd         ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd ;         ;
+; u_PC.vhd                         ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_PC.vhd                 ;         ;
+; BANK_REGISTER.vhd                ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/BANK_REGISTER.vhd        ;         ;
+; ULA_MIPS.vhd                     ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ULA_MIPS.vhd             ;         ;
+; ULA_OP.vhd                       ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ULA_OP.vhd               ;         ;
+; DATA_MEMORY.vhd                  ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATA_MEMORY.vhd          ;         ;
+; MUX_32.vhd                       ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/MUX_32.vhd               ;         ;
+; EXT_32.vhd                       ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/EXT_32.vhd               ;         ;
+; SHIFT_2_32.vhd                   ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd           ;         ;
+; SHIFT_2_26_28.vhd                ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd        ;         ;
+; CONC_28_32.vhd                   ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/CONC_28_32.vhd           ;         ;
+; DATAPATH_MIPS.vhd                ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd        ;         ;
+; u_TOP_MIPS.vhd                   ; yes             ; User VHDL File  ; C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd           ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 0        ;
-;                                             ;          ;
-; Combinational ALUT usage for logic          ; 0        ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 0        ;
-;     -- 5 input functions                    ; 0        ;
-;     -- 4 input functions                    ; 0        ;
-;     -- <=3 input functions                  ; 0        ;
-;                                             ;          ;
-; Dedicated logic registers                   ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 17       ;
-;                                             ;          ;
-; Total DSP Blocks                            ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; i_RegDst ;
-; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 17       ;
-; Average fan-out                             ; 0.50     ;
-+---------------------------------------------+----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; i_CLK ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; |DATAPATH_MIPS             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 17   ; 0            ; |DATAPATH_MIPS      ; DATAPATH_MIPS ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |u_TOP_MIPS                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |u_TOP_MIPS         ; u_TOP_MIPS  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                          ;
-+------------------------------------------------------------------+--------------------------------------------------------------------------+
-; Register name                                                    ; Reason for Removal                                                       ;
-+------------------------------------------------------------------+--------------------------------------------------------------------------+
-; u_INSTRUCTION_MEMORY:u_INSTRUCTION_MEMORY1|o_INSTRUCTION[0..24]  ; Merged with u_INSTRUCTION_MEMORY:u_INSTRUCTION_MEMORY1|o_INSTRUCTION[25] ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][31]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][31]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][31]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][31]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][31]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][31]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][0]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[2][0]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[3][0]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[4][0]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[5][0]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[6][0]                   ; Lost fanout                                                              ;
-; u_INSTRUCTION_MEMORY:u_INSTRUCTION_MEMORY1|o_INSTRUCTION[25..31] ; Stuck at GND due to stuck port data_in                                   ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][0]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][31]                  ; Lost fanout                                                              ;
-; u_PC:u_PC1|w_PC[2..31]                                           ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][0]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][1]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][2]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][3]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][4]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][5]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][6]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][7]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][8]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][9]                   ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][10]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][11]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][12]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][13]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][14]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][15]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][16]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][17]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][18]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][19]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][20]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][21]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][22]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][23]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][24]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][25]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][26]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][27]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][28]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][29]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][30]                  ; Lost fanout                                                              ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][31]                  ; Lost fanout                                                              ;
-; Total Number of Removed Registers = 318                          ;                                                                          ;
-+------------------------------------------------------------------+--------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                 ;
-+--------------------------------------------------------------+---------------------------+--------------------------------------------------+
-; Register name                                                ; Reason for Removal        ; Registers Removed due to This Register           ;
-+--------------------------------------------------------------+---------------------------+--------------------------------------------------+
-; u_INSTRUCTION_MEMORY:u_INSTRUCTION_MEMORY1|o_INSTRUCTION[25] ; Stuck at GND              ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][5],  ;
-;                                                              ; due to stuck port data_in ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][6],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][7],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][8],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][9],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][10], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][11], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][12], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][13], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][14], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][31], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][6],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][7],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][8],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][9],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][10], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][11], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][12], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][13], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][14], ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][31]  ;
-; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[1][31]              ; Lost Fanouts              ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][0],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][1],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][2],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][3],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[7][4],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][0],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][1],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][2],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][3],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][4],  ;
-;                                                              ;                           ; BANK_REGISTER:u_BANK_REGISTER|w_BANK_REG[0][5]   ;
-+--------------------------------------------------------------+---------------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -559,109 +252,119 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |DATAPATH_MIPS ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: u_PC:u_PC1 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; p_size         ; 32    ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MUX_32:u_MUX_5 ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; p_size         ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_ULA ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_B ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_J ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MUX_32:u_MUX_32_D ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BANK_REGISTER:u_BANK_REGISTER ;
+; Parameter Settings for User Entity Instance: Top-level Entity: |u_TOP_MIPS ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; p_size         ; 32    ; Signed Integer                                    ;
-; addr_size      ; 5     ; Signed Integer                                    ;
+; p_SIZE         ; 32    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA_MIPS:u_ULA_MIPS ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; p_SIZE         ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: DATA_MEMORY:u_DATA_MEMORY ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|u_PC:u_PC1 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; p_size         ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_5 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; p_size         ; 5     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_ULA ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; p_SIZE         ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_B ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; p_SIZE         ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_J ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; p_SIZE         ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_D ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; p_SIZE         ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|BANK_REGISTER:u_BANK_REGISTER ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; p_size         ; 32    ; Signed Integer                                                             ;
+; addr_size      ; 5     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|ULA_MIPS:u_ULA_MIPS ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; p_SIZE         ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH_MIPS:u_datapath|DATA_MEMORY:u_DATA_MEMORY ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; p_SIZE         ; 32    ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SHIFT_2_32:u_SHIFT_2_32"                                                            ;
+; Port Connectivity Checks: "DATAPATH_MIPS:u_datapath|SHIFT_2_32:u_SHIFT_2_32"                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -671,17 +374,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 17                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -699,103 +399,88 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Jun 19 03:11:35 2020
+    Info: Processing started: Sat Jun 20 09:49:51 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file u_controller.vhd
-    Info (12022): Found design unit 1: u_CONTROLLER-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 24
-    Info (12023): Found entity 1: u_CONTROLLER File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 6
+    Info (12022): Found design unit 1: u_CONTROLLER-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 24
+    Info (12023): Found entity 1: u_CONTROLLER File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file u_instruction_memory.vhd
-    Info (12022): Found design unit 1: u_INSTRUCTION_MEMORY-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 14
-    Info (12023): Found entity 1: u_INSTRUCTION_MEMORY File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 7
+    Info (12022): Found design unit 1: u_INSTRUCTION_MEMORY-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 14
+    Info (12023): Found entity 1: u_INSTRUCTION_MEMORY File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file u_pc.vhd
-    Info (12022): Found design unit 1: u_PC-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_PC.vhd Line: 16
-    Info (12023): Found entity 1: u_PC File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_PC.vhd Line: 7
+    Info (12022): Found design unit 1: u_PC-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_PC.vhd Line: 16
+    Info (12023): Found entity 1: u_PC File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_PC.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file bank_register.vhd
-    Info (12022): Found design unit 1: BANK_REGISTER-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/BANK_REGISTER.vhd Line: 20
-    Info (12023): Found entity 1: BANK_REGISTER File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/BANK_REGISTER.vhd Line: 5
+    Info (12022): Found design unit 1: BANK_REGISTER-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/BANK_REGISTER.vhd Line: 20
+    Info (12023): Found entity 1: BANK_REGISTER File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/BANK_REGISTER.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula_mips.vhd
-    Info (12022): Found design unit 1: ULA_MIPS-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ULA_MIPS.vhd Line: 16
-    Info (12023): Found entity 1: ULA_MIPS File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ULA_MIPS.vhd Line: 6
+    Info (12022): Found design unit 1: ULA_MIPS-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ULA_MIPS.vhd Line: 16
+    Info (12023): Found entity 1: ULA_MIPS File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ULA_MIPS.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ula_op.vhd
-    Info (12022): Found design unit 1: ULA_OP-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ULA_OP.vhd Line: 11
-    Info (12023): Found entity 1: ULA_OP File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ULA_OP.vhd Line: 4
+    Info (12022): Found design unit 1: ULA_OP-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ULA_OP.vhd Line: 11
+    Info (12023): Found entity 1: ULA_OP File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ULA_OP.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
-    Info (12022): Found design unit 1: DATA_MEMORY-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATA_MEMORY.vhd Line: 15
-    Info (12023): Found entity 1: DATA_MEMORY File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATA_MEMORY.vhd Line: 5
+    Info (12022): Found design unit 1: DATA_MEMORY-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATA_MEMORY.vhd Line: 15
+    Info (12023): Found entity 1: DATA_MEMORY File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATA_MEMORY.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux_32.vhd
-    Info (12022): Found design unit 1: MUX_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/MUX_32.vhd Line: 13
-    Info (12023): Found entity 1: MUX_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/MUX_32.vhd Line: 4
+    Info (12022): Found design unit 1: MUX_32-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/MUX_32.vhd Line: 13
+    Info (12023): Found entity 1: MUX_32 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/MUX_32.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ext_32.vhd
-    Info (12022): Found design unit 1: EXT_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 10
-    Info (12023): Found entity 1: EXT_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 4
+    Info (12022): Found design unit 1: EXT_32-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 10
+    Info (12023): Found entity 1: EXT_32 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/EXT_32.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_32.vhd
-    Info (12022): Found design unit 1: ADDER_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ADDER_32.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/ADDER_32.vhd Line: 5
+    Info (12022): Found design unit 1: ADDER_32-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ADDER_32.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_32 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/ADDER_32.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file shift_2_32.vhd
-    Info (12022): Found design unit 1: SHIFT_2_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd Line: 10
-    Info (12023): Found entity 1: SHIFT_2_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd Line: 4
+    Info (12022): Found design unit 1: SHIFT_2_32-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd Line: 10
+    Info (12023): Found entity 1: SHIFT_2_32 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/SHIFT_2_32.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file shift_2_26_28.vhd
-    Info (12022): Found design unit 1: SHIFT_2_26_28-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd Line: 10
-    Info (12023): Found entity 1: SHIFT_2_26_28 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd Line: 4
+    Info (12022): Found design unit 1: SHIFT_2_26_28-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd Line: 10
+    Info (12023): Found entity 1: SHIFT_2_26_28 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/SHIFT_2_26_28.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conc_28_32.vhd
-    Info (12022): Found design unit 1: CONC_28_32-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 11
-    Info (12023): Found entity 1: CONC_28_32 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 4
+    Info (12022): Found design unit 1: CONC_28_32-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 11
+    Info (12023): Found entity 1: CONC_28_32 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/CONC_28_32.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file datapath_mips.vhd
-    Info (12022): Found design unit 1: DATAPATH_MIPS-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 22
-    Info (12023): Found entity 1: DATAPATH_MIPS File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 6
+    Info (12022): Found design unit 1: DATAPATH_MIPS-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 22
+    Info (12023): Found entity 1: DATAPATH_MIPS File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mux_5.vhd
-    Info (12022): Found design unit 1: MUX_5-arch_1 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/MUX_5.vhd Line: 13
-    Info (12023): Found entity 1: MUX_5 File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/MUX_5.vhd Line: 4
-Info (12127): Elaborating entity "DATAPATH_MIPS" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at DATAPATH_MIPS.vhd(146): object "w_OUT_SHIFT_32" assigned a value but never read File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 146
-Warning (10541): VHDL Signal Declaration warning at DATAPATH_MIPS.vhd(147): used implicit default value for signal "w_OUT_ADDER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 147
-Warning (10036): Verilog HDL or VHDL warning at DATAPATH_MIPS.vhd(157): object "w_SHAMT" assigned a value but never read File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 157
-Info (12128): Elaborating entity "u_PC" for hierarchy "u_PC:u_PC1" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 177
-Info (12128): Elaborating entity "u_INSTRUCTION_MEMORY" for hierarchy "u_INSTRUCTION_MEMORY:u_INSTRUCTION_MEMORY1" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 187
-Info (12128): Elaborating entity "MUX_32" for hierarchy "MUX_32:u_MUX_5" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 193
-Info (12128): Elaborating entity "MUX_32" for hierarchy "MUX_32:u_MUX_32_ULA" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 203
-Info (12128): Elaborating entity "BANK_REGISTER" for hierarchy "BANK_REGISTER:u_BANK_REGISTER" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 243
-Info (12128): Elaborating entity "ULA_OP" for hierarchy "ULA_OP:u_ULA_OP" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 255
-Info (12128): Elaborating entity "ULA_MIPS" for hierarchy "ULA_MIPS:u_ULA_MIPS" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 262
-Info (12128): Elaborating entity "DATA_MEMORY" for hierarchy "DATA_MEMORY:u_DATA_MEMORY" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 273
-Info (12128): Elaborating entity "EXT_32" for hierarchy "EXT_32:u_EXT_32" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 284
-Info (12128): Elaborating entity "SHIFT_2_32" for hierarchy "SHIFT_2_32:u_SHIFT_2_32" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 289
-Info (12128): Elaborating entity "SHIFT_2_26_28" for hierarchy "SHIFT_2_26_28:u_SHIFT_2_26_28" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 294
-Info (12128): Elaborating entity "CONC_28_32" for hierarchy "CONC_28_32:u_CONC_28_32" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 299
-Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "DATA_MEMORY:u_DATA_MEMORY|w_MEMORY" is uninferred due to asynchronous read logic File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATA_MEMORY.vhd Line: 19
-    Info (276004): RAM logic "u_INSTRUCTION_MEMORY:u_INSTRUCTION_MEMORY1|rom_data" is uninferred due to inappropriate RAM size File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 18
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_OP[0]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 19
-    Warning (13410): Pin "o_OP[1]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 19
-    Warning (13410): Pin "o_OP[2]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 19
-    Warning (13410): Pin "o_OP[3]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 19
-    Warning (13410): Pin "o_OP[4]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 19
-    Warning (13410): Pin "o_OP[5]" is stuck at GND File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 19
-Info (17049): 286 registers lost all their fanouts during netlist optimizations.
+    Info (12022): Found design unit 1: MUX_5-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/MUX_5.vhd Line: 13
+    Info (12023): Found entity 1: MUX_5 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/MUX_5.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file u_top_mips.vhd
+    Info (12022): Found design unit 1: u_TOP_MIPS-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 14
+    Info (12023): Found entity 1: u_TOP_MIPS File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 5
+Info (12127): Elaborating entity "u_TOP_MIPS" for the top level hierarchy
+Info (12128): Elaborating entity "u_CONTROLLER" for hierarchy "u_CONTROLLER:u_control" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 26
+Info (12128): Elaborating entity "DATAPATH_MIPS" for hierarchy "DATAPATH_MIPS:u_datapath" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at DATAPATH_MIPS.vhd(146): object "w_OUT_SHIFT_32" assigned a value but never read File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 146
+Warning (10541): VHDL Signal Declaration warning at DATAPATH_MIPS.vhd(147): used implicit default value for signal "w_OUT_ADDER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 147
+Warning (10036): Verilog HDL or VHDL warning at DATAPATH_MIPS.vhd(157): object "w_SHAMT" assigned a value but never read File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 157
+Info (12128): Elaborating entity "u_PC" for hierarchy "DATAPATH_MIPS:u_datapath|u_PC:u_PC1" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 177
+Info (12128): Elaborating entity "u_INSTRUCTION_MEMORY" for hierarchy "DATAPATH_MIPS:u_datapath|u_INSTRUCTION_MEMORY:u_INSTRUCTION_MEMORY1" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 187
+Info (12128): Elaborating entity "MUX_32" for hierarchy "DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_5" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 193
+Info (12128): Elaborating entity "MUX_32" for hierarchy "DATAPATH_MIPS:u_datapath|MUX_32:u_MUX_32_ULA" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 203
+Info (12128): Elaborating entity "BANK_REGISTER" for hierarchy "DATAPATH_MIPS:u_datapath|BANK_REGISTER:u_BANK_REGISTER" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 243
+Info (12128): Elaborating entity "ULA_OP" for hierarchy "DATAPATH_MIPS:u_datapath|ULA_OP:u_ULA_OP" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 255
+Info (12128): Elaborating entity "ULA_MIPS" for hierarchy "DATAPATH_MIPS:u_datapath|ULA_MIPS:u_ULA_MIPS" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 262
+Info (12128): Elaborating entity "DATA_MEMORY" for hierarchy "DATAPATH_MIPS:u_datapath|DATA_MEMORY:u_DATA_MEMORY" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 273
+Info (12128): Elaborating entity "EXT_32" for hierarchy "DATAPATH_MIPS:u_datapath|EXT_32:u_EXT_32" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 284
+Info (12128): Elaborating entity "SHIFT_2_32" for hierarchy "DATAPATH_MIPS:u_datapath|SHIFT_2_32:u_SHIFT_2_32" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 289
+Info (12128): Elaborating entity "SHIFT_2_26_28" for hierarchy "DATAPATH_MIPS:u_datapath|SHIFT_2_26_28:u_SHIFT_2_26_28" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 294
+Info (12128): Elaborating entity "CONC_28_32" for hierarchy "DATAPATH_MIPS:u_datapath|CONC_28_32:u_CONC_28_32" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 299
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_RegDst" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 11
-    Warning (15610): No output dependent on input pin "i_CLK" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 9
-    Warning (15610): No output dependent on input pin "i_Branch" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 17
-    Warning (15610): No output dependent on input pin "i_ALU_OP[0]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 18
-    Warning (15610): No output dependent on input pin "i_ALU_OP[1]" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 18
-    Warning (15610): No output dependent on input pin "i_ALUSrc" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 12
-    Warning (15610): No output dependent on input pin "i_Jump" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 16
-    Warning (15610): No output dependent on input pin "i_RSTn" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_MemtoReg" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 13
-    Warning (15610): No output dependent on input pin "i_RegWrite" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 14
-    Warning (15610): No output dependent on input pin "i_MemWrite" File: C:/Users/leosh/OneDrive/햞ea de Trabalho/Trabalhos Faculdade/MIPS_ARQ/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 15
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 6 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Fri Jun 19 03:11:46 2020
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_CLK" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_RST" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 9
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Sat Jun 20 09:50:00 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
