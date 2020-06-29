@@ -5,10 +5,10 @@ use ieee.numeric_std.all;
 entity DATA_MEMORY is 
 generic(p_SIZE : integer := 32);
 port (
-  i_DATA : in  std_logic_vector(p_SIZE - 1 downto 0);
-  i_ADDR : in  std_logic_vector(p_SIZE - 1 downto 0);
-  i_CLK  : in  std_logic;
-  i_WR   : in  std_logic;
+  i_DATA : in  std_logic_vector(p_SIZE - 1 downto 0); -- Dado
+  i_ADDR : in  std_logic_vector(p_SIZE - 1 downto 0); -- Endereço
+  i_CLK  : in  std_logic; -- Clock
+  i_WR   : in  std_logic; -- Escreve dado
   o_DATA : out std_logic_vector(p_SIZE - 1 downto 0));
 end entity;
 

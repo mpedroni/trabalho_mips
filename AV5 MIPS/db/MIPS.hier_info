@@ -1,5 +1,4 @@
 |u_TOP_MIPS
-i_CLK => u_controller:u_control.i_CLK
 i_CLK => datapath_mips:u_datapath.i_CLK
 i_RST => datapath_mips:u_datapath.i_RSTn
 
@@ -41,7 +40,6 @@ i_OP[5] => Equal2.IN2
 i_OP[5] => Equal3.IN0
 i_OP[5] => Equal4.IN0
 i_OP[5] => Equal5.IN0
-i_CLK => ~NO_FANOUT~
 o_RegDst <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 o_ALUSrc <= o_ALUSrc.DB_MAX_OUTPUT_PORT_TYPE
 o_MemtoReg <= Equal1.DB_MAX_OUTPUT_PORT_TYPE

@@ -30,12 +30,12 @@ begin
 		  w_BANK_REG <= (others=>(others=>'0'));
 		elsif (rising_edge(i_CLK)) then 
 		  if(i_WR = '1') then 
-		    w_BANK_REG(to_integer(unsigned(i_WR_ADDR)/4)) <= i_DATA;
+		    w_BANK_REG(to_integer(unsigned(i_WR_ADDR))) <= i_DATA;
 		  end if;
 		end if;
     end process;
 
-  o_RD_DATA_A <= w_BANK_REG(to_integer(unsigned(i_RD_ADDR_A)/4));
-  o_RD_DATA_B <= w_BANK_REG(to_integer(unsigned(i_RD_ADDR_B)/4));
+  o_RD_DATA_A <= w_BANK_REG(to_integer(unsigned(i_RD_ADDR_A)));
+  o_RD_DATA_B <= w_BANK_REG(to_integer(unsigned(i_RD_ADDR_B)));
 end arch_1;
 	 

@@ -26,7 +26,6 @@ begin
 u_control: entity work.u_CONTROLLER -- Controle
   port map(
     i_OP		   => w_OPERATION,
-    i_CLK	   => i_CLK,
     --1-Bit
     o_RegDst   => w_REGDST,
     o_ALUSrc   => w_ALUSrc,

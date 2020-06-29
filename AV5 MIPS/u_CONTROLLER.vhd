@@ -6,7 +6,6 @@ use ieee.numeric_std.all;
 entity u_CONTROLLER is
 port(
      i_OP		 : in std_logic_vector(5 downto 0);
-     i_CLK		 : in std_logic;
      --1-Bit Control Signal
      o_RegDst	 : out std_logic;
      o_ALUSrc   : out std_logic;
@@ -46,6 +45,5 @@ architecture arch_1 of u_CONTROLLER is
     o_Branch   <= w_BEQ;
     --2 bits output
     o_ALUOp(1) <=  w_R_FORMAT;
-    o_ALUOp(0) <=  w_BEQ;
-	 
+    o_ALUOp(0) <=  w_BEQ; 
 end arch_1;

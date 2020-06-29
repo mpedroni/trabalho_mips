@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Sat Jun 20 09:50:00 2020
+Sun Jun 28 20:45:43 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jun 20 09:50:00 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 28 20:45:43 2020       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; MIPS                                        ;
 ; Top-level Entity Name           ; u_TOP_MIPS                                  ;
@@ -358,7 +358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                   ;
 +----------------+-------+------------------------------------------------------------------------+
-; p_SIZE         ; 32    ; Signed Integer                                                         ;
+; p_size         ; 32    ; Signed Integer                                                         ;
 +----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -399,12 +399,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Jun 20 09:49:51 2020
+    Info: Processing started: Sun Jun 28 20:45:29 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file u_controller.vhd
-    Info (12022): Found design unit 1: u_CONTROLLER-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 24
+    Info (12022): Found design unit 1: u_CONTROLLER-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 23
     Info (12023): Found entity 1: u_CONTROLLER File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_CONTROLLER.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file u_instruction_memory.vhd
     Info (12022): Found design unit 1: u_INSTRUCTION_MEMORY-arch_1 File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_INSTRUCTION_MEMORY.vhd Line: 14
@@ -453,7 +453,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file u_top_m
     Info (12023): Found entity 1: u_TOP_MIPS File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 5
 Info (12127): Elaborating entity "u_TOP_MIPS" for the top level hierarchy
 Info (12128): Elaborating entity "u_CONTROLLER" for hierarchy "u_CONTROLLER:u_control" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 26
-Info (12128): Elaborating entity "DATAPATH_MIPS" for hierarchy "DATAPATH_MIPS:u_datapath" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 42
+Info (12128): Elaborating entity "DATAPATH_MIPS" for hierarchy "DATAPATH_MIPS:u_datapath" File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/u_TOP_MIPS.vhd Line: 41
 Warning (10036): Verilog HDL or VHDL warning at DATAPATH_MIPS.vhd(146): object "w_OUT_SHIFT_32" assigned a value but never read File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 146
 Warning (10541): VHDL Signal Declaration warning at DATAPATH_MIPS.vhd(147): used implicit default value for signal "w_OUT_ADDER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 147
 Warning (10036): Verilog HDL or VHDL warning at DATAPATH_MIPS.vhd(157): object "w_SHAMT" assigned a value but never read File: C:/Users/bruno/Documents/GitHub/trabalho_mips/AV5 MIPS/DATAPATH_MIPS.vhd Line: 157
@@ -479,8 +479,8 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Sat Jun 20 09:50:00 2020
-    Info: Elapsed time: 00:00:09
+    Info: Processing ended: Sun Jun 28 20:45:43 2020
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:22
 
 
